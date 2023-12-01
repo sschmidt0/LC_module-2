@@ -10,12 +10,12 @@ var books = [
 ];
 var isBookRead = function (books, titleToSearch) {
     if (books === void 0) { books = []; }
-    var searchBook = books.find(function (book) { return book.title === titleToSearch; });
+    var searchBook = books.find(function (book) { return (book === null || book === void 0 ? void 0 : book.title) === titleToSearch; });
     if (searchBook === undefined) {
         return false;
     }
     ;
-    return Boolean(searchBook.isRead);
+    return Boolean(searchBook === null || searchBook === void 0 ? void 0 : searchBook.isRead);
 };
 console.log({ books: books });
 console.log("\u00ECs the book 'Devastaci\u00F3n' read?: ".concat(isBookRead(books, 'Devastación')));

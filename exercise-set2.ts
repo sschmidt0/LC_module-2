@@ -16,13 +16,13 @@ const books: Book[] = [
 ];
 
 const isBookRead = (books: Book[] = [], titleToSearch: string): boolean => {
-  const searchBook = books.find((book) => book.title === titleToSearch);
+  const searchBook = books.find((book) => book?.title === titleToSearch);
 
   if (searchBook === undefined) {
     return false
   };
 
-  return Boolean(searchBook.isRead);
+  return Boolean(searchBook?.isRead);
 };
 
 console.log({ books });

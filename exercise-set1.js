@@ -32,6 +32,34 @@ console.log(`init(elements) --> ${init(elements)}`);
 console.log(`last(elements) --> ${last(elements)}`);
 
 
+
+/**
+ * EXERCISE 2 - Concat
+ */
+
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+
+const concat = (a, b) => {
+  return [...a, ...b];
+};
+
+console.log(`first array: ${first} and second array: ${second}`);
+console.log(`concat(first, second) --> ${concat(first, second)}`);
+
+
+// Optional: concat multiples arrays
+
+const third = [7, 8, 9];
+const fourth = [10, 11, 12];
+const fifth = [13, 14, 15];
+
+const concatMultiple = (...args) => args;
+
+console.log(`concat multiple arrays --> ${concatMultiple(first, second, third, fourth, fifth)}`);
+
+
+
 /**
  * EXERCISE 3 - Clone Merge
  */

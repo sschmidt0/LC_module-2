@@ -1,4 +1,38 @@
 /**
+ * EXERCISE 1 - Array operations
+ */
+
+const elements = ['first element', 'second element', 'third element', 'fourth element'];
+
+// 1. Head - return first element
+const head = ([first]) => first;
+
+// 2. Tail - return array without last element
+const tail = (arguments) => {
+  const newArguments = [...arguments];
+  newArguments.pop()
+  return newArguments;
+};
+
+// 3. Init - return array without first element
+const init = (arguments) => {
+  const newArguments = [...arguments];
+  newArguments.shift();
+  return newArguments;
+}
+
+// 4. Last - return last element
+const last = ([,,,fourth]) => fourth;
+
+
+console.log(elements);
+console.log(`head(elements) --> ${head(elements)}`);
+console.log(`tail(elements) --> ${tail(elements)}`);
+console.log(`init(elements) --> ${init(elements)}`);
+console.log(`last(elements) --> ${last(elements)}`);
+
+
+/**
  * EXERCISE 3 - Clone Merge
  */
 

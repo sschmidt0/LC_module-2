@@ -21,3 +21,7 @@ was added.
 First the exercise 4 where Typescript was used had to be compiled into JS. Therefore, the command `npm run typescript:watch` was used in the terminal.
 
 Afterwards, The project could be started and opened in the Browser with VSCode's Live Server.
+
+## Check console for results
+
+If you want to see the results in the console, start the Live Server and check the Browser's console.

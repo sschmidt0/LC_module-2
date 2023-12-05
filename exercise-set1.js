@@ -9,17 +9,16 @@ const head = ([first]) => first;
 
 // 2. Tail - return array without last element
 const tail = (arguments) => {
-  const newArguments = [...arguments];
-  newArguments.pop()
+  const [_first, ...newArguments] = arguments;
   return newArguments;
-};
+}
 
 // 3. Init - return array without first element
 const init = (arguments) => {
   const newArguments = [...arguments];
-  newArguments.shift();
+  newArguments.pop()
   return newArguments;
-}
+};
 
 // 4. Last - return last element
 const last = ([,,,fourth]) => fourth;
@@ -103,17 +102,17 @@ y reiniciar las monedas almacenadas, ya que las hemos conseguido y han salido de
  */
 
 class SlothMachine {
-  coins = 0;
+  #coins = 0;
 
   play () {
-    this.coins++;
+    this.#coins++;
 
     const booleanA = this.getBoolean();
     const booleanB = this.getBoolean();
     const booleanC = this.getBoolean();
 
     if (booleanA && booleanB && booleanC) {
-      console.log(`Congratulations!!!. You won ${this.coins} coins!!`);
+      console.log(`Congratulations!!!. You won ${this.#coins} coins!!`);
     } else {
       console.log('Good luck next time!!')
     }

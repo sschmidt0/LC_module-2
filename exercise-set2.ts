@@ -5,8 +5,8 @@
  */
 
 interface Book {
-  title: String;
-  isRead: Boolean;
+  title: string;
+  isRead: boolean;
 }
 
 const books: Book[] = [

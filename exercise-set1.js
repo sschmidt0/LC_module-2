@@ -21,7 +21,7 @@ const init = (arguments) => {
 };
 
 // 4. Last - return last element
-const last = ([,,,fourth]) => fourth;
+const last = (arguments) => arguments?.slice(-1).pop() || "not available";
 
 
 console.log(elements);
@@ -29,6 +29,17 @@ console.log(`head(elements) --> ${head(elements)}`);
 console.log(`tail(elements) --> ${tail(elements)}`);
 console.log(`init(elements) --> ${init(elements)}`);
 console.log(`last(elements) --> ${last(elements)}`);
+
+
+const newElements = ['Sarah', 'Clara', 'Sole'];
+const newElements2 = ['a', 'b', 'c'];
+const newElements3 = [1, 2, 3, 4, 5, 6, 7];
+
+console.log(`last(newElements) --> ${last(newElements)}`);
+console.log(`last(newElements2) --> ${last(newElements2)}`);
+console.log(`last(newElements3) --> ${last(newElements3)}`);
+console.log(`last([]) --> ${last([])}`);
+console.log(`last(undefined) --> ${last(undefined)}`);
 
 
 

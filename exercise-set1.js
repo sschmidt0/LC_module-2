@@ -53,11 +53,23 @@ const third = [7, 8, 9];
 const fourth = [10, 11, 12];
 const fifth = [13, 14, 15];
 
-const concatMultiple = (...args) => args;
+const concatMultiple = (arr1, ...arr) => arr1?.concat(...arr);
 
-console.log(`concat multiple arrays --> ${concatMultiple(first, second, third, fourth, fifth)}`);
-
-
+console.log(
+  `concat multiple arrays --> ${concatMultiple(
+    first,
+    second,
+    third,
+    fourth,
+    fifth
+  )}`
+);
+console.log(`concat multiple arrays --> ${concatMultiple(first)}`);
+console.log(`concat multiple arrays --> ${concatMultiple([])}`);
+console.log(`concat multiple arrays --> ${concatMultiple(undefined)}`);
+console.log(
+  `concat multiple arrays --> ${concatMultiple(first, second, third)}`
+);
 
 /**
  * EXERCISE 3 - Clone Merge

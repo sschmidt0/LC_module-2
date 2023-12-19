@@ -15,15 +15,9 @@ const books: Book[] = [
   { title: 'Devastación', isRead: true },
 ];
 
-const isBookRead = (books: Book[] = [], titleToSearch: string): boolean => {
-  const searchBook = books.find((book) => book?.title === titleToSearch);
+const isBookRead = (books: Book[] = [], titleToSearch: string): boolean =>
+   books.find((book) => book?.title === titleToSearch)?.isRead || false;
 
-  if (searchBook === undefined) {
-    return false
-  };
-
-  return Boolean(searchBook?.isRead);
-};
 
 console.log({ books });
 console.log(`ìs the book 'Devastación' read?: ${isBookRead(books, 'Devastación')}`);

@@ -9,13 +9,9 @@ var books = [
     { title: 'Devastación', isRead: true },
 ];
 var isBookRead = function (books, titleToSearch) {
+    var _a;
     if (books === void 0) { books = []; }
-    var searchBook = books.find(function (book) { return (book === null || book === void 0 ? void 0 : book.title) === titleToSearch; });
-    if (searchBook === undefined) {
-        return false;
-    }
-    ;
-    return Boolean(searchBook === null || searchBook === void 0 ? void 0 : searchBook.isRead);
+    return ((_a = books.find(function (book) { return (book === null || book === void 0 ? void 0 : book.title) === titleToSearch; })) === null || _a === void 0 ? void 0 : _a.isRead) || false;
 };
 console.log({ books: books });
 console.log("\u00ECs the book 'Devastaci\u00F3n' read?: ".concat(isBookRead(books, 'Devastación')));
